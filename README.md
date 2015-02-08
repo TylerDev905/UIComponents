@@ -7,6 +7,8 @@ Components:
 3. Treeview
 4. Sorting Table
 5. Slider container
+6. Alerts
+7. Popups container (insert a form inside)
 ```
 <img src="http://i62.tinypic.com/287exsi.png"/></img>
 
