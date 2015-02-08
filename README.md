@@ -1,12 +1,13 @@
 # UIComponents
 UIComponents written in JavaScript(JQuery) / Html / CSS
-
+```
 Components:
 1. Utility Menu
 2. Accordion
 3. Treeview
 4. Sorting Table
 5. Slider container
+```
 
 The following components use a javascript object with specified properties to create the component on the page.
 For components that use images just set the path.
