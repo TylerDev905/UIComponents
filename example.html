@@ -1,0 +1,142 @@
+<! doctype html>
+<html>
+	<head>
+		<title>TylerDev's Jquery Components</title>
+		<style>
+		.componentText{
+			color:white;
+			font-size:16px;
+		}
+		</style>
+		<link rel="stylesheet" href="components.css">
+		<script src="jquery-2.0.2.min.js"></script>
+		<script src="components.js"></script>
+		<body>
+	
+<div id="util"></div>
+<div id="context"></div>
+<div id="screen"></div>
+<div id="popup"></div>	
+</br>
+</br>
+<span class="componentText">
+Accordion container
+</span>
+<div class="accordion"></div>
+</br>
+<span class="componentText">
+Treeview data table
+</span>
+<div class="tree"></div>
+</br>
+<span class="componentText">
+Integer table sorting
+</span>
+<table class="table" id="one"></table>
+</br>
+<span class="componentText">
+String table sorting
+</span>
+<table class="table" id="two"></table>
+</br>
+
+<span class="componentText">
+Slider container
+</span>
+<div class="slider"></div>	
+
+
+<span id="coords" style="color:white;"></span>
+		
+		
+		
+		<script>
+
+var slider1 = new Slider();		
+console.log(slider1);		
+		
+		
+var treeView;
+var treeViewContent = {
+	container:$(".tree"),
+	data:[
+		{type:"item",img:"icons/txt.png",label:"One"},
+		{type:"item",img:"icons/txt.png",label:"Two"},
+		{
+			type:"expand",img:"icons/folder.png",
+			label:"Tree",
+			data:[
+					{type:"item",img:"icons/txt.png",label:"Four"},
+					{type:"item",img:"icons/txt.png",label:"Five"}
+				]
+		},
+		{type:"item",img:"icons/txt.png",label:"Four"},
+		{type:"item",img:"icons/txt.png",label:"Five"},
+		{
+			type:"expand",img:"icons/folder.png",
+			label:"Tree",
+			data:[
+					{type:"item",img:"icons/txt.png",label:"Four"},
+					{type:"item",img:"icons/txt.png",label:"Five"}
+				]
+		},
+		{
+			type:"expand",img:"icons/folder.png",
+			label:"Tree",
+			data:[
+					{type:"item",img:"icons/txt.png",label:"Four"},
+					{type:"item",img:"icons/txt.png",label:"Five"}
+				]
+		},
+		{type:"item",img:"icons/txt.png",label:"One"},
+		{type:"item",img:"icons/txt.png",label:"Two"}
+	]
+};	
+var treeView = new TreeView(treeViewContent);	
+
+var utilityMenuContent = [
+	{type:"tab",label:"Settings",img:"icons/settings.png",context:{top:0,left:0,menu:[{type:"item",label:"Alert Test",img:"img/alert.png",fnc:"alert"},{type:"item",label:"Prompt Test",img:"img/prompt.png",fnc:"prompt"},{type:"subMenu",label:"Sub Menu Test",img:"icons/export.png",menu:[{type:"item",label:"item",img:"img/key.png"},{type:"disabled",label:"disabled"}]},{type:"divider"},{type:"disabled",label:"Disabled Test"}]}},
+	{type:"tab",label:"Edit",img:"icons/edit.png"},
+	{type:"tab",label:"View",img:"icons/view.png"},
+	{type:"tab",label:"Help",img:"icons/help.png"}
+];
+var utilityOpen = false;
+utilityMenu = new UtilityMenu(utilityMenuContent);
+
+var accordionContent = {
+	container:$(".accordion"),
+	sections:[
+		{header:"Header1",content:"<p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>"},
+		{header:"Header2",content:"<p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>"},
+		{header:"Header3",content:"<p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>"},
+		{header:"Header4",content:"<p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>"}
+	]
+};
+accordion1 = new Accordion(accordionContent);
+
+
+var tableContent = {
+		container:$("#one"),
+		columns:[
+			{header:"Header 1",sort:"ASC",col:['4','2','3','1']},
+			{header:"Header 2",sort:"DESC",col:['2','3','1']},
+			{header:"Header 3",sort:"ASC",col:['2','3','1']}
+		]
+	};
+var table1 = new Table(tableContent);
+
+var tableContent = {
+		container:$("#two"),
+		columns:[
+			{header:"Header 1",sort:"ASC",col:['Tyler','Mike','Nick']},
+			{header:"Header 2",sort:"DESC",col:['Tyler','Mike','Nick']},
+			{header:"Header 3",sort:"ASC",col:['Tyler','Mike','Nick']},
+		]
+	};
+var table2 = new Table(tableContent);
+
+
+		
+		</script>
+		</body>
+</html>
