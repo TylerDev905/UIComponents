@@ -8,6 +8,11 @@ Components:
 4. Sorting Table
 5. Slider container
 ```
+<img src="http://i62.tinypic.com/287exsi.png"/></img>
+
+<img src="http://i59.tinypic.com/2dnvgg.png"/></img>
+
+<img src="http://i58.tinypic.com/f1aan7.png"/><img>
 
 The following components use a javascript object with specified properties to create the component on the page.
 For components that use images just set the path.
